@@ -342,12 +342,12 @@ def recommend(movie):
         recommended_movies_poster.append(poster_url)
     return recommended_movies , recommended_movies_poster
 
-movies_1 = pickle.load(open('D:\\Python Work\\Movies_recommendation_system\\movies.pkl' , 'rb'))
+movies_1 = pickle.load(open(os.path.join(current_dir, "movies.pkl") , 'rb'))
 movies = pd.DataFrame(movies_1)
 movies_list = movies['title'].values
 
 
-similarity = pickle.load(open('D:\\Python Work\\Movies_recommendation_system\\similarity_matrix.pkl' , 'rb'))
+similarity = pickle.load(open(os.path.join(current_dir, "similarity_matrix.pkl") , 'rb'))
 
 st.title('Akbar Movies Recommendation system 🎥')
 
