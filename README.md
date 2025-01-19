@@ -41,12 +41,5 @@ Welcome to the **Akbar Movies Recommendation System**! This application leverage
 └── requirements.txt           # List of dependencies
 ```
 
----
-
-## 🔑 API Key
-This application uses the TMDb API to fetch movie posters. Make sure to replace the placeholder API key in the code:
-```python
-api_key = "your_tmdb_api_key"
-```
 
 ### Made with ❤️ by **Mujeeb Akbar**
