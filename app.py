@@ -3,6 +3,10 @@ import requests
 import pickle
 import streamlit as st
 import base64
+import os
+
+# Get the current working directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 st.set_page_config(
@@ -17,10 +21,10 @@ def get_img_as_base64(file):
     return base64.b64encode(data).decode()
 
 # Convert the image "img.jpg" to base64
-img = get_img_as_base64("D:\\Python Work\\Movies_recommendation_system\\img.jpg")
+img = get_img_as_base64(os.path.join(current_dir, "img.jpg"))
 
 # Convert the local image to base64
-Background_img = get_img_as_base64("D:\\Python Work\\Movies_recommendation_system\\background.jpg")  # Replace with your local image path
+Background_img = get_img_as_base64(os.path.join(current_dir, "background.jpg"))  # Replace with your local image path
 
 
 page_bg_img = f"""
