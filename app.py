@@ -227,7 +227,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 # Sidebar configuration
 with st.sidebar:
     # Display logo image
-    st.image(os.path.join(current_dir, "img.jpg"), use_container_width=True)
+    st.image(os.path.join(current_dir, "logo_movies.png"), use_container_width=True)
 
     # Adding a custom style with HTML and CSS
     st.markdown("""
