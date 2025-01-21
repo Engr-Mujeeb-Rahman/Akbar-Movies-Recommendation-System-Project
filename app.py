@@ -344,7 +344,7 @@ movies = pd.DataFrame(movies_1)
 movies_list = movies['title'].values
 
 
-similarity = pickle.load(open('similarity_matrix.pkl' , 'rb'))
+similarity = pickle.load(open('similarity.pkl' , 'rb'))
 
 st.title('Akbar Movies Recommendation system 🎥')
 
