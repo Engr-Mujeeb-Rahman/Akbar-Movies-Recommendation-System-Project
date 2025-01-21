@@ -3,10 +3,7 @@ import requests
 import pickle
 import streamlit as st
 import base64
-import os
 
-# Get the current working directory
-current_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 st.set_page_config(
@@ -21,10 +18,10 @@ def get_img_as_base64(file):
     return base64.b64encode(data).decode()
 
 # Convert the image "img.jpg" to base64
-img = get_img_as_base64(os.path.join(current_dir, "img.jpg"))
+img = get_img_as_base64("img.jpg")
 
 # Convert the local image to base64
-Background_img = get_img_as_base64(os.path.join(current_dir, "background.jpg"))  # Replace with your local image path
+Background_img = get_img_as_base64("background.jpg")  # Replace with your local image path
 
 
 page_bg_img = f"""
@@ -227,7 +224,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 # Sidebar configuration
 with st.sidebar:
     # Display logo image
-    st.image(os.path.join(current_dir, "logo_movies.png"), use_container_width=True)
+    st.image("logo_movies.png", use_container_width=True)
 
     # Adding a custom style with HTML and CSS
     st.markdown("""
@@ -342,12 +339,12 @@ def recommend(movie):
         recommended_movies_poster.append(poster_url)
     return recommended_movies , recommended_movies_poster
 
-movies_1 = pickle.load(open(os.path.join(current_dir, "movies.pkl") , 'rb'))
+movies_1 = pickle.load(open('movies.pkl' , 'rb'))
 movies = pd.DataFrame(movies_1)
 movies_list = movies['title'].values
 
 
-similarity = pickle.load(open(os.path.join(current_dir, "similarity_matrix.pkl") , 'rb'))
+similarity = pickle.load(open('similarity_matrix.pkl' , 'rb'))
 
 st.title('Akbar Movies Recommendation system 🎥')
 
