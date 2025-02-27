@@ -42,4 +42,4 @@ Welcome to the **Akbar Movies Recommendation System**! This application leverage
 ```
 
 
-### Made with ❤️ by **Mujeeb Akbar**
+### Made with ❤️ by **Engr. Mujeeb Ur Rahman**
