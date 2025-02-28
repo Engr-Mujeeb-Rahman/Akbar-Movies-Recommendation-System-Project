@@ -18,7 +18,7 @@ def get_img_as_base64(file):
     return base64.b64encode(data).decode()
 
 # Convert the image "img.jpg" to base64
-img = get_img_as_base64("D:\Python Work\Movies_recommendation_system\img.jpg")
+img = get_img_as_base64("img.jpg")
 
 # Convert the local image to base64
 Background_img = get_img_as_base64("background.jpg")  # Replace with your local image path
@@ -224,7 +224,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 # Sidebar configuration
 with st.sidebar:
     # Display logo image
-    st.image("D:\\Python Work\\Movies_recommendation_system\\logo_movies.png", use_container_width=True)
+    st.image("logo_movies.png", use_container_width=True)
 
     # Adding a custom style with HTML and CSS
     st.markdown("""
@@ -339,12 +339,12 @@ def recommend(movie):
         recommended_movies_poster.append(poster_url)
     return recommended_movies , recommended_movies_poster
 
-movies_1 = pickle.load(open('D:\\Python Work\\Movies_recommendation_system\\movies.pkl' , 'rb'))
+movies_1 = pickle.load(open('movies.pkl' , 'rb'))
 movies = pd.DataFrame(movies_1)
 movies_list = movies['title'].values
 
 
-similarity = pickle.load(open('D:\\Python Work\\Movies_recommendation_system\\similarity_matrix.pkl' , 'rb'))
+similarity = pickle.load(open('similarity_matrix.pkl' , 'rb'))
 
 st.title('Akbar Movies Recommendation system 🎥')
 
